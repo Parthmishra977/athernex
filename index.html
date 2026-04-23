@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnomalyShield Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>AnomalyShield - Cyber Attack Dashboard</h1>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>Live Metrics</h2>
+        <p>CPU: <span id="cpu">0</span>%</p>
+        <p>Memory: <span id="memory">0</span>%</p>
+        <p>Traffic: <span id="traffic">0</span></p>
+        <p>Response Time: <span id="response">0</span> ms</p>
+    </div>
+
+    <div class="card">
+        <h2>Detection</h2>
+        <p id="attack">Normal</p>
+        <p id="severity">None</p>
+    </div>
+
+    <div class="card">
+        <h2>Controls</h2>
+        <button onclick="startSimulation()">Start</button>
+        <button onclick="stopSimulation()">Stop</button>
+        <button onclick="injectAttack()">Inject Attack</button>
+    </div>
+
+</div>
+
+<div class="logs">
+    <h2>Event Logs</h2>
+    <div id="logBox"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
